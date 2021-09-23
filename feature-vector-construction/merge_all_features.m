@@ -3,7 +3,12 @@ function [all_sessions_fea] = merge_all_features(data_dir, all_topic_presence, a
 % Inputs:
 %   data_dir: directory storing the data sets downloaded from DAIC-WOZ database.
 %   all_topic_presence: topic presence feature for all sessions.
-%   all_audio_fea: 
+%   all_audio_fea: audio features for all sessions.
+%   all_video_fea: video features for all sessions.
+%   all_semantic_fea: semantic features for all sessions.
+% Output:
+%   all_sessions_fea: merged features for all sessions.
+
 sessions = struct2table(dir(data_dir));
 sessions = split(sessions.name(3:end), '_');
 sessions_id = str2double(sessions(:,1));
