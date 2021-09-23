@@ -1,5 +1,16 @@
 function [topic_presence, audio_feature, video_feature, topic_id] = topicWise_feature_mapping_eachSession(unzip_dir, sessionID, topicsName, semantic_session_dir)
 
+% Inputs:
+%   unzip_dir: directory storing files extracted from a session's directory.
+%   sessionID: session identifier.
+%   topicsName: a cell array containing names of extracted topics (see Supplementary material associated with this article).
+%   semantic_session_dir: directory storing the topic-wise transcripts for a specific session.
+% Outputs:
+%   topic_presence: topic presence feature for one session.
+%   audio_feature: audio features for one session.
+%   video_feature: video features for one session.
+%   topic_id: topic identifiers presented for one session.
+
 num_topics = length(topicsName);
 topic_presence = -ones(num_topics,1);
 audio_feature = -ones(num_topics, 237); % (74 covarep + 5 formants) x 3(mean, max, min) = 237
