@@ -1,5 +1,9 @@
 function [all_sessions_fea] = merge_all_features(data_dir, all_topic_presence, all_audio_fea, all_video_fea, all_semantic_fea)
 
+% Inputs:
+%   data_dir: directory storing the data sets downloaded from DAIC-WOZ database.
+%   all_topic_presence: topic presence feature for all sessions.
+%   all_audio_fea: 
 sessions = struct2table(dir(data_dir));
 sessions = split(sessions.name(3:end), '_');
 sessions_id = str2double(sessions(:,1));
