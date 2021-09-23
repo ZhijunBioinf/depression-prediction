@@ -1,5 +1,16 @@
 function [all_topic_presence, all_audio_fea, all_video_fea, all_topic_id] = topicWise_feature_mapping(data_dir, unzip_dir, topicsName, semantic_dir)
 
+% Inputs:
+%   data_dir: directory storing the data sets downloaded from DAIC-WOZ database.
+%   unzip_dir: directory storing files extracted from a session's directory.
+%   topicsName: a cell array containing names of extracted topics (see Supplementary material associated with this article).
+%   semantic_dir: directory storing the topic-wise transcripts.
+% Outputs:
+%   all_topic_presence: topic presence feature for all sessions.
+%   all_audio_fea: audio features for all sessions.
+%   all_video_fea: video features for all sessions.
+%   all_topic_id: topic identifiers for all sessions.
+
 sessions = struct2table(dir(data_dir));
 sessions = sessions.name(3:end);
 if exist(unzip_dir, 'dir')
