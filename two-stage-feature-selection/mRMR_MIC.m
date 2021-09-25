@@ -1,5 +1,12 @@
 function [fea] = mRMR_MIC(data, K, ncpus)
 
+% Inputs:
+%   data: a matrix where the data in the 1st column is Y and the remainder are X.
+%   K: the number of top K features that should be returned.
+%   ncpus: the number of cpu(s) used for computing feature ranking in parallel.
+% Outputs:
+%   fea: the ranking of top K features.
+
 Y = data(:,1);
 X = data(:,2:end);
 x_num = size(X,2);
@@ -22,7 +29,7 @@ fprintf('Calculating MICs between Y and each feature: done!! Elapsed time is %gs
 [~, idxs] = sort(-MIC_xy);
 fea = nan(1,K);
 fea(1) = idxs(1);
-% set the maximum K as 5000 allowing for efficient feature ranking.
+% set the maximum K as 5000 (you may change it to a larger number) allowing for efficient feature ranking.
 KMAX = min([5000, x_num]);
 if K > KMAX
     error('The number of top K features should be less than KMAX')
