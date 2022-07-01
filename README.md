@@ -21,7 +21,7 @@ A function to merge all types of features, including topic presence, audio featu
 * the MIC score calculated in mRMR-MIC is returned by the 'mine' function, which is included in the minepy library (version 1.2.4), an open-source library for the Maximal Information-based Nonparametric Exploration.
 * The SVM model is implemented by the LIBSVM software package.
 
-## Article citation:
+## Citation
 Z Dai, H Zhou, Q Ba, Y Zhou, L Wang*, G Li*. Improving Depression Prediction Using a Novel Feature Selection Algorithm Coupled with Context-Aware Analysis. Journal of Affective Disorders. 2021, 295: 1040-1048.
 
 ## Attention:
