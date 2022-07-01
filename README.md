@@ -22,7 +22,7 @@ A function to merge all types of features, including topic presence, audio featu
 * The SVM model is implemented by the LIBSVM software package.
 
 ## Article citation:
-Z Dai, H Zhou, Q Ba, Y Zhou, L Wang*, G Li*. Improving Depression Prediction Using a Novel Feature Selection Algorithm Coupled with Context-Aware Analysis. Journal of Affective Disorders. 2021, 295: 1040-48.
+Z Dai, H Zhou, Q Ba, Y Zhou, L Wang*, G Li*. Improving Depression Prediction Using a Novel Feature Selection Algorithm Coupled with Context-Aware Analysis. Journal of Affective Disorders. 2021, 295: 1040-1048.
 
 ## Attention:
 The codes released in this repository are free for academic usage. For other purposes, please contact Zhijun Dai (daizhijun@hunau.edu.cn)
